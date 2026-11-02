@@ -2,7 +2,8 @@
 ## Pfunzo Maiwashe ST10512786 DISD0601
 ## 1. Organisation overview
 ### Business name: 
- Luu’s Hair is a luxury frontal wig company created to offer premium quality hair solutions for women interested in protective styling, convenience and confidence. What started as a small boutique supplier has grown into a well-respected brand, known for its craftsmanship, transparency and personalized customer service. Lu’s Hair specializes in high end frontal wigs, closures and hair accessories. Our focus is on quality assurance and customer education.  
+ Luu’s Hair is a luxury frontal wig company created to offer premium quality hair solutions for women interested in protective styling, convenience and
+ confidence. What started as a small boutique supplier has grown into a well-respected brand, known for its craftsmanship, transparency and personalized customer service. Lu’s Hair specializes in high end frontal wigs, closures and hair accessories. Our focus is on quality assurance and customer education.  
  
 ### Mission:
 Lu’s Hair is dedicated to empowering women thru luxury frontal wigs that enhance beauty, build confidence and allow for true self-expression. The brand’s mission is to inspire every woman to feel bold, elegant and unapologetically herself with thoughtful design and premium craftsmanship.
