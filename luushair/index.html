@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luu's Hair Salon | Luxury Wigs & Custom Hair Extensions</title>
+    <!-- On-Page SEO Meta Tags (Section 3.1) -->
+    <meta name="description" content="Welcome to Luu's Hair Salon. Premium human hair wigs, custom wig designing, aftercare services, and best-selling hair bundles in Pretoria.">
+    <meta name="keywords" content="Luu's Hair, luxury wigs, human hair wigs Pretoria, wig salon, design your wig, aftercare">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_assets/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Hair Logo -->
+        <img src="_images/Logo.png" alt="Luu's Hair Logo" width="200" height="200">
+        <br>
+        <!-- Navigation Menu -->
+        <nav align="center">
+            <a href="index.html">Home</a> &nbsp;|&nbsp;
+            <a href="aboutus.html">About Us</a> &nbsp;|&nbsp;
+            <a href="contact.html">Contact Us</a> &nbsp;|&nbsp;
+            <a href="enquiries.html">Enquiries</a> &nbsp;|&nbsp;
+            <a href="products.html">Products</a> &nbsp;|&nbsp;
+            <a href="shopwigs.html">Shop For Wigs</a> &nbsp;|&nbsp;
+            <a href="aftercare.html">After Care</a> &nbsp;|&nbsp;
+            <a href="bestseller.html">Best Seller</a> &nbsp;|&nbsp;
+            <a href="newarrivals.html">New Arrivals</a> &nbsp;|&nbsp;
+            <a href="onsale.html">On Sale</a> &nbsp;|&nbsp;
+            <a href="designyourwig.html">Design Your Wig</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section class="hero">
+
+            <!-- WELCOME TEXT FIRST -->
+            <div class="hero-content">
+                <h1 class="fall-animation">WELCOME TO LUU'S HAIR</h1>
+                <a href="shopwigs.html" class="shop-btn">SHOP NOW</a>
+            </div>
+
+            <!-- SUBSCRIPTION BOX BELOW WELCOME -->
+            <section class="subscribe-section">
+                <div class="subscribe-left">
+                    <h2>JOIN OUR WEEKLY NEWSLETTER</h2>
+                    <button id="openSubscribeBtn" class="subscribe-btn">SUBSCRIBE</button>
+                </div>
+
+                <div class="subscribe-right">
+                    <div class="envelope">
+                        <div class="envelope-top"></div>
+                        <div class="envelope-heart">❤</div>
+                    </div>
+
+                    <p class="subscribe-text">
+                        Join the subscription to get extra points for your next order
+                        and be the first to know about our new arrivals and special offers.
+                    </p>
+                </div>
+            </section>
+
+            <!-- IMAGES LAST -->
+            <img src="_images/homepagepic.png" class="hero-small-img" alt="Luu's Hair Collection Banner">
+            <img src="_images/straightnewwig.png" class="hero-small-img-right" alt="Straight Luxury Hair Wig">
+
+        </section>
+
+        <!-- Newsletter Interactive Modal (Rubric Section 2.1 - Interactive Element) -->
+        <div id="subscribeModal" class="modal-overlay">
+            <div class="modal-card">
+                <span class="close-btn" id="closeModalBtn">&times;</span>
+                <h3>Join Luu's Hair Club</h3>
+                <p>Subscribe to receive 10% off your first order!</p>
+                <form id="subscribeForm">
+                    <input type="email" id="subEmail" placeholder="Enter your email address" required class="modal-input">
+                    <button type="submit" class="modal-submit-btn">Join Now</button>
+                </form>
+                <p id="subResponse" class="modal-success-msg"></p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="quick-links-container">
+                <a href="aboutus.html" class="footer-link"><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <a href="enquiries.html"><i class="fa-solid fa-question"></i> Enquiries</a>
+                <a href="products.html"><i class="fa-solid fa-box"></i> Products</a>
+                <a href="shopwigs.html"><i class="fa-solid fa-store"></i> Shop Wigs</a>
+                <a href="aftercare.html"><i class="fa-solid fa-scissors"></i> After Care</a>
+                <a href="bestseller.html"><i class="fa-solid fa-star"></i> Best Seller</a>
+                <a href="newarrivals.html"><i class="fa-solid fa-bolt"></i> New Arrivals</a>
+                <a href="onsale.html"><i class="fa-solid fa-tags"></i> On Sale</a>
+                <a href="designyourwig.html"><i class="fa-solid fa-paintbrush"></i> Design Your Wig</a>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <div class="social-section">
+            <h2 class="social-heading">FOLLOW US ON SOCIALS</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/luus_hair_plug" class="social-icon instagram" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@luus_hair_plug" class="social-icon tiktok" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Luu's Hair Salon. All rights reserved.</p>
+    </footer>
+    <script src="js_assets/main.js"></script>
+
+    <!-- Subscription Modal JavaScript Logic -->
+    <script>
+        const subModal = document.getElementById("subscribeModal");
+        const openSubBtn = document.getElementById("openSubscribeBtn");
+        const closeSubBtn = document.getElementById("closeModalBtn");
+        const subForm = document.getElementById("subscribeForm");
+        const subResponse = document.getElementById("subResponse");
+
+        openSubBtn.addEventListener("click", () => {
+            subModal.style.display = "flex";
+        });
+
+        closeSubBtn.addEventListener("click", () => {
+            subModal.style.display = "none";
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === subModal) {
+                subModal.style.display = "none";
+            }
+        });
+
+        subForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("subEmail").value;
+            if (email) {
+                subResponse.textContent = "Thank you for subscribing! Check your email for your 10% discount code.";
+                subResponse.style.display = "block";
+                subForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>

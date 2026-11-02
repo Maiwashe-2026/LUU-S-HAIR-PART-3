@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & General Messages | Luu's Hair Salon</title>
+    <meta name="description" content="Get in touch with Luu's Hair Salon. Send us a general message, inquiry, or find our salon location in Pretoria with our interactive map.">
+    <meta name="keywords" content="contact Luu's Hair, hair salon Pretoria, customer support, wig inquiries, salon address">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_assets/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-msg { color: red; font-size: 0.85rem; display: block; margin-top: 3px; }
+        .success-msg { color: green; font-weight: bold; margin-top: 10px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; max-width: 500px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <!---Header Section--->
+    <header>
+        <img src="_images/Logo.png" alt="Luu's Hair Logo" width="200" height="200">
+        <nav align  ="center"> 
+        <a href ="index.html">Home</a>&nbsp; |&nbsp;
+        <a href ="aboutus.html">About Us</a>&nbsp; |&nbsp;
+        <a href ="contact.html"> Contact Us</a>&nbsp; |&nbsp;
+        <a href ="enquiries.html"> Enquiries</a>&nbsp; |&nbsp;
+        <a href ="products.html"> Products</a>&nbsp; |&nbsp;
+        <a href ="shopwigs.html"> Shop For Wigs</a>&nbsp; |&nbsp;
+        <a href ="aftercare.html"> After Care</a>&nbsp; |&nbsp;
+        <a href ="bestseller.html"> Best Seller</a>&nbsp; |&nbsp;
+        <a href ="newarrivals.html">New Arrivals</a>&nbsp; |&nbsp;
+        <a href ="onsale.html"> On Sale</a>&nbsp; |&nbsp;
+        <a href ="designyourwig.html"> Design Your Wig</a>&nbsp; |&nbsp;
+    </nav>
+     <nav>
+
+    </div>
+</nav>
+        <hr>
+    </header>
+
+    <!---MAIN CONTENT--->
+    <main>
+        <h1>Contact Us</h1>
+        <p>
+            We would love to hear from you! Whether you have a question, need assistance, or simply want to connect,
+            our team is here to help. Reach out using the details below, send us a message, or visit us in person.
+        </p>
+
+        <!----CONTACT INFORMATION---->
+        <h2>Contact Information</h2>
+        <p>
+            <b>Address:</b> 123 Luxury Lane, Hair City, HC 45678<br>
+            <b>WhatsApp:</b> <a href="https://wa.me/27712345678" target="_blank">071 234 5678</a><br>
+            <b>Email:</b> <a href="mailto:luushair@gmail.com">luushair@gmail.com</a><br>
+            <b>Response Time:</b> We usually reply within 24-48 hours
+        </p>
+
+        <!---- CONTACT FORM SECTION (Required for Part 3) ---->
+        <h2>Send Us a General Message</h2>
+        <form id="contactForm" action="mailto:luushair@gmail.com" method="POST" enctype="text/plain">
+            
+            <div class="form-group">
+                <label for="contactName">Full Name:</label>
+                <input type="text" id="contactName" name="name" placeholder="Enter your full name">
+                <span id="nameError" class="error-msg"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="contactEmail">Email Address:</label>
+                <input type="email" id="contactEmail" name="email" placeholder="Enter your email">
+                <span id="emailError" class="error-msg"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="messageType">Type of Message:</label>
+                <select id="messageType" name="message_type">
+                    <option value="">-- Select Message Type --</option>
+                    <option value="General Query">General Query</option>
+                    <option value="Feedback">Feedback / Compliment</option>
+                    <option value="Order Support">Order Support</option>
+                </select>
+                <span id="typeError" class="error-msg"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="contactMessage">Full Message:</label>
+                <textarea id="contactMessage" name="message" rows="5" placeholder="Type your message here..."></textarea>
+                <span id="messageError" class="error-msg"></span>
+            </div>
+
+            <button type="submit" style="padding: 10px 20px; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+            <p id="formSuccess" class="success-msg"></p>
+        </form>
+
+        <hr style="margin: 30px 0;">
+
+        <!--- MAP SECTION (Interactive Map Requirement) --->
+        <!-- MAP SECTION 1 -->
+    <h3>Find Us Here (Main Salon)</h3>
+    <p>Use the map below to locate our main salon. We can't wait to welcome you!</p>
+    <!-- MAP SECTION 1 -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14374.692403547397!2d28.188205004232184!3d-25.748321937761563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spretoria!5e0!3m2!1sen!2sza!4v1"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+    <br><br>
+
+    <!-- MAP SECTION 2 (Second Location) -->
+    <h3>Pickup Point / Branch 2</h3>
+    <p>Visit our second collection desk or partner pick-up point.</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14339.815765202606!2d27.925387587158202!3d-26.03506299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spretoria!5e0!3m2!1sen!2sza!4v1"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+        <section class="quick-links">
+            <div class="quick-links-container">
+                <a href="aboutus.html" class="footer-link"><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <a href="enquiries.html"><i class="fa-solid fa-question"></i> Enquiries</a>
+                <a href="products.html"><i class="fa-solid fa-box"></i> Products</a>
+                <a href="shopwigs.html"><i class="fa-solid fa-store"></i> Shop Wigs</a>
+                <a href="aftercare.html"><i class="fa-solid fa-scissors"></i> After Care</a>
+                <a href="bestseller.html"><i class="fa-solid fa-star"></i> Best Seller</a>
+                <a href="newarrivals.html"><i class="fa-solid fa-bolt"></i> New Arrivals</a>
+                <a href="onsale.html"><i class="fa-solid fa-tags"></i> On Sale</a>
+                <a href="designyourwig.html"><i class="fa-solid fa-paintbrush"></i> Design Your Wig</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Luu's Hair Salon. All rights reserved.</p>
+    </footer>
+    <script src="js_assets/main.js"></script>
+
+
+    <!-- JavaScript Form Validation Script -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            let isValid = true;
+
+            // Clear previous errors & success
+            document.querySelectorAll(".error-msg").forEach(el => el.textContent = "");
+            document.getElementById("formSuccess").textContent = "";
+
+            // Validate Name
+            const name = document.getElementById("contactName").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Please enter your full name.";
+                isValid = false;
+            }
+
+            // Validate Email
+            const email = document.getElementById("contactEmail").value.trim();
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Please enter your email address.";
+                isValid = false;
+            } else if (!email.match(emailPattern)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate Message Type
+            const messageType = document.getElementById("messageType").value;
+            if (messageType === "") {
+                document.getElementById("typeError").textContent = "Please select a message type.";
+                isValid = false;
+            }
+
+            // Validate Message Body
+            const message = document.getElementById("contactMessage").value.trim();
+            if (message === "") {
+                document.getElementById("messageError").textContent = "Please type your message.";
+                isValid = false;
+            }
+
+            // If validation fails, prevent submission
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+                // Optional success message simulation for AJAX/Client-side feel
+                document.getElementById("formSuccess").textContent = "Validation successful! Compiling your message...";
+            }
+        });
+    </script>
+</body>
+</html>

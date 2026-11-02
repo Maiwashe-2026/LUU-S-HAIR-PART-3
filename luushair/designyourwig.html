@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Wig & Price Calculator | Luu's Hair</title>
+    <!-- On-Page SEO Meta Tags -->
+    <meta name="description" content="Customize your dream wig at Luu's Hair. Choose custom length, texture, lace type, and color, and receive an instant price estimation.">
+    <meta name="keywords" content="custom wig design, wig calculator, design your wig Pretoria, frontal lace closure, custom human hair wig">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css_assets/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .error-msg { color: #d9534f; font-size: 0.85rem; display: block; margin-top: 4px; }
+        .form-container { max-width: 600px; margin: 20px auto; text-align: left; background: #fafafa; padding: 25px; border-radius: 8px; border: 1px solid #e0e0e0; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { font-weight: 600; display: block; margin-bottom: 5px; }
+        .form-group select, .form-group input[type="text"], .form-group input[type="tel"] {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        .checkbox-group label { font-weight: normal; display: inline-block; margin-bottom: 5px; cursor: pointer; }
+        #responseSummary {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            color: #166534;
+        }
+    </style>
+</head>
+<body>
+
+    <!---Header Section--->
+    <header>
+        <img src="_images/Logo.png" alt="Luu's Hair Logo" width="200" height="200">
+
+        <!--Navigation menu-->
+        <nav align="center">
+            <a href="index.html">Home</a>&nbsp; |&nbsp;
+            <a href="aboutus.html">About Us</a>&nbsp; |&nbsp;
+            <a href="contact.html">Contact Us</a>&nbsp; |&nbsp;
+            <a href="enquiries.html">Enquiries</a>&nbsp; |&nbsp;
+            <a href="products.html">Products</a>&nbsp; |&nbsp;
+            <a href="shopwigs.html">Shop For Wigs</a>&nbsp; |&nbsp;
+            <a href="aftercare.html">After Care</a>&nbsp; |&nbsp;
+            <a href="bestseller.html">Best Seller</a>&nbsp; |&nbsp;
+            <a href="newarrivals.html">New Arrivals</a>&nbsp; |&nbsp; 
+            <a href="onsale.html">On Sale</a>&nbsp; |&nbsp; 
+            <a href="designyourwig.html">Design Your Wig</a>&nbsp; |&nbsp;
+        </nav> 
+        <hr>
+    </header>
+
+    <main>
+        <h1 align="center">Design Your Wig & Get an Instant Quote</h1>
+        <p align="center">Choose your preferred wig features below and receive instant pricing and availability information.</p>
+
+        <div class="form-container">
+            <form id="wigDesignForm" novalidate>
+
+                <!-- LENGTH -->
+                <div class="form-group">
+                    <label for="wigLength"><b>Select Length:</b></label>
+                    <select id="wigLength">
+                        <option value="">-- Choose Length --</option>
+                        <option value="10" data-price="800">10 inch (R 800.00)</option>
+                        <option value="12" data-price="1000">12 inch (R 1,000.00)</option>
+                        <option value="14" data-price="1200">14 inch (R 1,200.00)</option>
+                        <option value="16" data-price="1400">16 inch (R 1,400.00)</option>
+                        <option value="18" data-price="1600">18 inch (R 1,600.00)</option>
+                        <option value="20" data-price="1800">20 inch (R 1,800.00)</option>
+                        <option value="22" data-price="2000">22 inch (R 2,000.00)</option>
+                        <option value="24" data-price="2200">24 inch (R 2,200.00)</option>
+                    </select>
+                    <span id="lengthError" class="error-msg"></span>
+                </div>
+
+                <!-- STYLE -->
+                <div class="form-group">
+                    <label for="wigStyle"><b>Select Style:</b></label>
+                    <select id="wigStyle">
+                        <option value="">-- Choose Style --</option>
+                        <option value="Straight">Straight</option>
+                        <option value="Body Wave">Body Wave (+R 150)</option>
+                        <option value="Deep Wave">Deep Wave (+R 200)</option>
+                        <option value="Curly">Curly (+R 200)</option>
+                        <option value="Afro">Afro Kinky (+R 250)</option>
+                        <option value="Bob Cut">Bob Cut (+R 100)</option>
+                    </select>
+                    <span id="styleError" class="error-msg"></span>
+                </div>
+
+                <!-- COLOUR -->
+                <div class="form-group">
+                    <label for="wigColour"><b>Select Colour:</b></label>
+                    <select id="wigColour">
+                        <option value="">-- Choose Colour --</option>
+                        <option value="Natural Black (1B)">Natural Black (1B)</option>
+                        <option value="Honey Blonde">Honey Blonde (+R 300)</option>
+                        <option value="Ombre Brown">Ombre Brown (+R 250)</option>
+                        <option value="Jet Black">Jet Black (+R 100)</option>
+                        <option value="Burgundy">Burgundy (+R 250)</option>
+                        <option value="Custom Colour">Custom Colour (+R 400)</option>
+                    </select>
+                    <span id="colourError" class="error-msg"></span>
+                </div>
+
+                <!-- LACE TYPE -->
+                <div class="form-group">
+                    <label for="laceType"><b>Select Lace Type:</b></label>
+                    <select id="laceType">
+                        <option value="">-- Choose Lace Type --</option>
+                        <option value="5x5 Closure" data-price="400">5x5 Closure (+R 400)</option>
+                        <option value="6x6 Closure" data-price="500">6x6 Closure (+R 500)</option>
+                        <option value="13x4 Frontal" data-price="700">13x4 Frontal (+R 700)</option>
+                        <option value="13x6 Frontal" data-price="850">13x6 Frontal (+R 850)</option>
+                    </select>
+                    <span id="laceError" class="error-msg"></span>
+                </div>
+
+                <!-- EXTRA OPTIONS -->
+                <div class="form-group checkbox-group">
+                    <label><b>Extra Add-ons:</b></label>
+                    <label><input type="checkbox" class="extra-option" value="Baby Hair" data-price="50"> Baby Hair (+R 50)</label><br>
+                    <label><input type="checkbox" class="extra-option" value="Pre-plucked Hairline" data-price="100"> Pre-plucked Hairline (+R 100)</label><br>
+                    <label><input type="checkbox" class="extra-option" value="Bleached Knots" data-price="100"> Bleached Knots (+R 100)</label><br>
+                    <label><input type="checkbox" class="extra-option" value="Custom Fit Cap" data-price="150"> Custom Fit Cap (+R 150)</label>
+                </div>
+
+                <!-- USER NAME -->
+                <div class="form-group">
+                    <label for="userName"><b>Your Name:</b></label>
+                    <input type="text" id="userName" placeholder="Enter your full name">
+                    <span id="nameError" class="error-msg"></span>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="form-group">
+                    <label for="userPhone"><b>WhatsApp Number:</b></label>
+                    <input type="tel" id="userPhone" placeholder="e.g. 0712345678">
+                    <span id="phoneError" class="error-msg"></span>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" style="width: 100%; padding: 12px; background: #000; color: #fff; font-size: 1rem; border: none; border-radius: 4px; cursor: pointer;">Calculate Total & Submit</button>
+
+            </form>
+
+            <!-- DYNAMIC COST AND RESPONSE SUMMARY (Rubric 4.1 Requirement) -->
+            <div id="responseSummary">
+                <h3 style="margin-top: 0;">✨ Custom Wig Quote Summary</h3>
+                <p id="summaryText"></p>
+                <p><b>Estimated Turnaround Time:</b> 3 to 5 Business Days</p>
+                <p><b>Availability Status:</b> <span style="color: green; font-weight: bold;">In Stock & Ready for Construction</span></p>
+                <button id="confirmOrderBtn" style="padding: 8px 15px; background: #166534; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Quote to WhatsApp</button>
+            </div>
+        </div>
+
+        <section class="quick-links">
+            <div class="quick-links-container">
+                <a href="aboutus.html" class="footer-link"><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <a href="enquiries.html"><i class="fa-solid fa-question"></i> Enquiries</a>
+                <a href="products.html"><i class="fa-solid fa-box"></i> Products</a>
+                <a href="shopwigs.html"><i class="fa-solid fa-store"></i> Shop Wigs</a>
+                <a href="aftercare.html"><i class="fa-solid fa-scissors"></i> After Care</a>
+                <a href="bestseller.html"><i class="fa-solid fa-star"></i> Best Seller</a>
+                <a href="newarrivals.html"><i class="fa-solid fa-bolt"></i> New Arrivals</a>
+                <a href="onsale.html"><i class="fa-solid fa-tags"></i> On Sale</a>
+                <a href="designyourwig.html"><i class="fa-solid fa-paintbrush"></i> Design Your Wig</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <hr>
+        <p align="center">&copy; 2026 Luu's Hair Salon. All rights reserved.</p>
+    </footer>
+    <script src="js_assets/main.js"></script>
+
+    <script>
+        document.getElementById("wigDesignForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll(".error-msg").forEach(el => el.textContent = "");
+            document.getElementById("responseSummary").style.display = "none";
+
+            // Form Fields
+            const lengthSelect = document.getElementById("wigLength");
+            const styleSelect = document.getElementById("wigStyle");
+            const colourSelect = document.getElementById("wigColour");
+            const laceSelect = document.getElementById("laceType");
+            const nameInput = document.getElementById("userName");
+            const phoneInput = document.getElementById("userPhone");
+
+            // 1. Validate Length
+            if (!lengthSelect.value) {
+                document.getElementById("lengthError").textContent = "Please select a wig length.";
+                isValid = false;
+            }
+
+            // 2. Validate Style
+            if (!styleSelect.value) {
+                document.getElementById("styleError").textContent = "Please select a wig style.";
+                isValid = false;
+            }
+
+            // 3. Validate Colour
+            if (!colourSelect.value) {
+                document.getElementById("colourError").textContent = "Please select a hair colour.";
+                isValid = false;
+            }
+
+            // 4. Validate Lace Type
+            if (!laceSelect.value) {
+                document.getElementById("laceError").textContent = "Please select a lace size.";
+                isValid = false;
+            }
+
+            // 5. Validate Name
+            if (nameInput.value.trim() === "") {
+                document.getElementById("nameError").textContent = "Please enter your full name.";
+                isValid = false;
+            }
+
+            // 6. Validate Phone Number (Basic South Africa format check)
+            const phoneRegex = /^0[0-9]{9}$/;
+            const cleanPhone = phoneInput.value.replace(/\s+/g, '');
+            if (cleanPhone === "") {
+                document.getElementById("phoneError").textContent = "Please enter your WhatsApp number.";
+                isValid = false;
+            } else if (!phoneRegex.test(cleanPhone)) {
+                document.getElementById("phoneError").textContent = "Please enter a valid 10-digit South African phone number (e.g. 0712345678).";
+                isValid = false;
+            }
+
+            // Process calculation if form is valid
+            if (isValid) {
+                // Calculate Base Price from Length
+                let basePrice = parseInt(lengthSelect.options[lengthSelect.selectedIndex].getAttribute("data-price")) || 0;
+                
+                // Calculate Lace Price
+                let lacePrice = parseInt(laceSelect.options[laceSelect.selectedIndex].getAttribute("data-price")) || 0;
+                
+                // Add-on options calculation
+                let extrasTotal = 0;
+                let selectedExtras = [];
+                document.querySelectorAll(".extra-option:checked").forEach(cb => {
+                    extrasTotal += parseInt(cb.getAttribute("data-price"));
+                    selectedExtras.push(cb.value);
+                });
+
+                let grandTotal = basePrice + lacePrice + extrasTotal;
+
+                // Build output summary
+                const summaryHtml = `
+                    Hi <b>${nameInput.value.trim()}</b>, thank you for designing your custom wig with Luu's Hair!<br><br>
+                    <b>Selected Specifications:</b><br>
+                    • Length: ${lengthSelect.value} Inches<br>
+                    • Style: ${styleSelect.value}<br>
+                    • Colour: ${colourSelect.value}<br>
+                    • Lace Type: ${laceSelect.value}<br>
+                    • Add-ons: ${selectedExtras.length > 0 ? selectedExtras.join(", ") : "None"}<br><br>
+                    <b style="font-size: 1.2rem; color: #000;">Total Estimated Price: R ${grandTotal.toLocaleString()}.00</b>
+                `;
+
+                document.getElementById("summaryText").innerHTML = summaryHtml;
+                document.getElementById("responseSummary").style.display = "block";
+
+                // Setup WhatsApp Click Action
+                document.getElementById("confirmOrderBtn").onclick = function() {
+                    const msg = encodeURIComponent(`Hello Luu's Hair! My name is ${nameInput.value}. I designed a ${lengthSelect.value}" ${styleSelect.value} wig (${colourSelect.value}, ${laceSelect.value}) for R ${grandTotal}. Is it available?`);
+                    window.open(`https://wa.me/27712345678?text=${msg}`, '_blank');
+                };
+            }
+        });
+    </script>
+</body>
+</html>
